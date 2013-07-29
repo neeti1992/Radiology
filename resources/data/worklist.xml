@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<catalog>
+  <worklist>
+    <patientName>xyz</patientName>
+    <patientID>123xyz</patientID>
+    <status>processing</status>
+    <procedure>X-RAY</procedure>
+    <start_date>06/24/2013</start_date>
+    <scan_body_part>true</scan_body_part>
+  </worklist>
+</catalog>
