@@ -1,4 +1,4 @@
-Ext.define('src.com.rmc.projects.Radiology.view.addOrder', {
+Ext.define('com.rmc.projects.Radiology.view.addOrder', {
     extend: 'Ext.form.Panel',
     alias: 'widget.addOrder',
     id: 'addOrder',
@@ -73,7 +73,7 @@ Ext.define('src.com.rmc.projects.Radiology.view.addOrder', {
         xtype: 'textfield',
         width: 240,
         blankText: '',
-        id: 'addOrderPhysicianName'
+        id: 'addOrderPhysicianName',
         emptyText: 'Enter the Physician name',
         x: 10,
         y: 210
