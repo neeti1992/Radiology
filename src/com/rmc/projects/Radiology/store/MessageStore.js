@@ -15,13 +15,13 @@
  * 
  * This file lists 
  */
-Ext.define('src.com.rmc.projects.Radiology.store.MessageStore', {
+Ext.define('com.rmc.projects.Radiology.store.MessageStore', {
     
     // --------------------------------------
     // Properties
     // --------------------------------------
     extend: 'Ext.data.Store',
-    model : ['src.com.rmc.projects.Radiology.model.WorklistModel','src.com.rmc.projects.Radiology.model.MessageModel']
+    model : ['com.rmc.projects.Radiology.model.WorklistModel','src.com.rmc.projects.Radiology.model.MessageModel']
    /* fields: ['message'],
     data: [
         {message: 'Hello World From MessageStore!'}
