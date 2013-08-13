@@ -15,21 +15,21 @@
  * 
  * This file lists all the models, views, & stores. Also listed are methods and event handlers.
  */
-Ext.define('src.com.rmc.projects.Radiology.controller.MainController', {
+Ext.define('com.rmc.projects.Radiology.controller.MainController', {
     
     // --------------------------------------
     // Properties
     // --------------------------------------
     extend: 'Ext.app.Controller',
     
-    views : ['src.com.rmc.projects.Radiology.view.MainView', 'src.com.rmc.projects.Radiology.view.MainViewUI', 'src.com.rmc.projects.Radiology.view.Home',
-     'src.com.rmc.projects.Radiology.view.worklist','src.com.rmc.projects.Radiology.view.worklistGrid', 'src.com.rmc.projects.Radiology.view.worklistNavBar',
-     'src.com.rmc.projects.Radiology.view.addOrder',
+    views : ['com.rmc.projects.Radiology.view.MainView', 'com.rmc.projects.Radiology.view.MainViewUI', 'com.rmc.projects.Radiology.view.Home',
+     'com.rmc.projects.Radiology.view.worklist','com.rmc.projects.Radiology.view.worklistGrid', 'com.rmc.projects.Radiology.view.worklistNavBar',
+     'com.rmc.projects.Radiology.view.addOrder',
     ],
 
-    stores: ['src.com.rmc.projects.Radiology.store.MessageStore','src.com.rmc.projects.Radiology.store.WorklistStore'],
+    stores: ['com.rmc.projects.Radiology.store.MessageStore','com.rmc.projects.Radiology.store.WorklistStore'],
 
-    models: ['src.com.rmc.projects.Radiology.store.WorklistModel'],
+    models: ['com.rmc.projects.Radiology.model.WorklistModel'],
 
     // --------------------------------------
     // Constructor
@@ -46,7 +46,7 @@ Ext.define('src.com.rmc.projects.Radiology.controller.MainController', {
         });
         
         //CREATE THE UI
-        var mainView = Ext.create('src.com.rmc.projects.Radiology.view.MainView', {
+        var mainView = Ext.create('com.rmc.projects.Radiology.view.MainView', {
             renderTo: Ext.getBody()
         });
         mainView.show();
