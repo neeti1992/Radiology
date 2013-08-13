@@ -40,14 +40,14 @@ Ext.application ({
         // Properties
         // --------------------------------------
         name: 'Radiology',
-        //models: ['src.com.rmc.projects.Radiology.model.MessageModel'],
+        //models: ['com.rmc.projects.Radiology.model.MessageModel'],
        // autoCreateViewport : false,
 
         //AFTER 'LAUNCH' THE CODE IN THE CONTROLLER IS FIRED
         //THE UI AND OTHER IMPORTANT THINGS HAPPEN WITHIN THE FOLLOWING CLASS
         //SIMPLY SETTING THIS PROPERY HERE WIRES-UP AND RUNS THE CONTROLLER
        controllers: [
-              'src.com.rmc.projects.Radiology.controller.MainController'
+             'com.rmc.projects.Radiology.controller.MainController'
         ],
         
        views: ['com.rmc.projects.Radiology.view.MainView'],
@@ -66,7 +66,7 @@ Ext.application ({
         console.log ("Radiology.launch()");
 
                 //SHOW DIALOG BOX (OPTIONAL)
-                //Ext.MessageBox.alert('Radiology','Close this MessageBox and click "Load Message" or "Clear Message". That is it!');
+               // Ext.MessageBox.alert('Radiology','Close this MessageBox and click "Load Message" or "Clear Message". That is it!');
                    
                 //NEXT?
                 //See the MainController.js code from above
