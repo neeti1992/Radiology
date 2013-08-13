@@ -1,6 +1,6 @@
-Ext.define('src.com.rmc.projects.Radiology.store.WorklistStore', {
+Ext.define('com.rmc.projects.Radiology.store.WorklistStore', {
     extend: 'Ext.data.Store',
-    model: 'src.com.rmc.projects.Radiology.model.WorklistModel',
+    model: 'com.rmc.projects.Radiology.model.WorklistModel',
     storeId: 'WorklistStore',
     autoLoad: true,
     autoSync: false,
@@ -20,5 +20,6 @@ Ext.define('src.com.rmc.projects.Radiology.store.WorklistStore', {
                         type: 'xml',
                         // records will have a 'worklist' tag
                         record: 'worklist'
+                    }
     },
 });
