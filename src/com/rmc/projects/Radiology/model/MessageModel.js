@@ -14,7 +14,7 @@
  * the License.
  * 
  */
-Ext.define('src.com.rmc.projects.Radiology.model.MessageModel', {
+Ext.define('com.rmc.projects.Radiology.model.MessageModel', {
     
     // --------------------------------------
     // Properties
