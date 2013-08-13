@@ -1,4 +1,4 @@
-Ext.define('src.com.rmc.projects.Radiology.model.WorklistModel', {
+Ext.define('com.rmc.projects.Radiology.model.WorklistModel', {
     extend: 'Ext.data.Model',
     fields: [{   //name, type, model, mapping
         name: 'id',
