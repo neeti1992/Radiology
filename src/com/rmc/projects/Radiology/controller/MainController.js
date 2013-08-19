@@ -77,8 +77,20 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
         Ext.getCmp('addOrder').hide();
     },
     
-    submitNewDrug: function() {
+    submitNewOrder: function() {
             Ext.getCmp('addOrder').hide();  //To Do: modify following code once backend is done
+            Ext.getCmp.store.getProxy();
+        Ext.getCmp.store.load({
+            scope: this,
+            callback: function(records, operation, success){
+                if(success){
+                    //do the things here
+                }
+                else{
+                    Ext.Msg.alert("Error", Util.getMessageLoadError());
+                }
+            }
+        });
             /*
             Ext.Ajax.request({
             url: 
