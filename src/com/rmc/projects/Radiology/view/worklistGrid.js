@@ -4,7 +4,7 @@ Ext.define('com.rmc.projects.Radiology.view.worklistGrid', {
     id: 'worklistGrid',   
     width: 780 - 2, // Total pixels - Border
     margin: '0 0 0 0',
-    store: 'WorklistStore',
+    // store: 'WorklistStore',
     features: [Ext.create('Ext.grid.feature.Grouping',{
         startCollapsed: true,
     })

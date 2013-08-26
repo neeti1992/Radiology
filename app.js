@@ -50,17 +50,21 @@ Ext.application ({
              'com.rmc.projects.Radiology.controller.MainController'
         ],
         
-       views: ['com.rmc.projects.Radiology.view.MainView'],
+    views : ['com.rmc.projects.Radiology.view.MainView', 'com.rmc.projects.Radiology.view.MainViewUI', 'com.rmc.projects.Radiology.view.Home',
+     'com.rmc.projects.Radiology.view.worklist','com.rmc.projects.Radiology.view.worklistGrid', 'com.rmc.projects.Radiology.view.worklistNavBar',
+     'com.rmc.projects.Radiology.view.addOrder',
+    ],
         // --------------------------------------
         // Properties
         // --------------------------------------
         launch: function()
         {
-               Ext.QuickTips.init();
-               var mainView = Ext.create('com.rmc.projects.Radiology.view.MainView', {
-               renderTo: Ext.getBody()
-               });
-               mainView.show();
+          console.log('hi');
+               // Ext.QuickTips.init();
+               // var mainView = Ext.create('com.rmc.projects.Radiology.view.MainView', {
+               // renderTo: Ext.getBody()
+               // });
+               // mainView.show();
         
         //TRACE
         console.log ("Radiology.launch()");

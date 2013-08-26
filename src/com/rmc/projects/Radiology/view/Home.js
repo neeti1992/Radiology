@@ -17,7 +17,7 @@
  */
 Ext.define('com.rmc.projects.Radiology.view.Home', {
     extend: 'Ext.container.Container',
-    requires: ['com.rmc.projects.Radiology.view.worklistNavBar'],
+    // requires: ['com.rmc.projects.Radiology.view.worklistNavBar'],
     alias: 'widget.Home',
     layout: {
         type: 'hbox'

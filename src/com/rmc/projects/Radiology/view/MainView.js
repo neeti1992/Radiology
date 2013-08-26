@@ -21,14 +21,15 @@ Ext.define('com.rmc.projects.Radiology.view.MainView', {
     // Properties
     // --------------------------------------
     extend: 'com.rmc.projects.Radiology.view.MainViewUI',
+    // extend: 'Ext.container.Viewport',
 
     // --------------------------------------
     // Constructor
     // --------------------------------------
-    initComponent: function() {
-        var me = this;
-        me.callParent(arguments);
-    }
+    // initComponent: function() {
+    //     var me = this;
+    //     me.callParent(arguments);
+    // }
     
     
 });

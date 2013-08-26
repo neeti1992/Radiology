@@ -21,26 +21,5 @@ Ext.define('com.rmc.projects.Radiology.store.MessageStore', {
     // Properties
     // --------------------------------------
     extend: 'Ext.data.Store',
-    model : ['com.rmc.projects.Radiology.model.WorklistModel','src.com.rmc.projects.Radiology.model.MessageModel']
-   /* fields: ['message'],
-    data: [
-        {message: 'Hello World From MessageStore!'}
-    ],
-    autoLoad : true,
-    
-    messageModel : null,
-    
-    // --------------------------------------
-    // Properties
-    // --------------------------------------
-    loadModel : function () {
-        
-        this.messageModel = new this.model ();
-    },
-    getMessage : function () {
-        
-        console.log (this.data.items[0].data.message)
-        return this.data.items[0].data.message;
-    }
-*/    
+    model : 'com.rmc.projects.Radiology.model.MessageModel'
 });
