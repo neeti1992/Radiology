@@ -36,21 +36,12 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
     // --------------------------------------
     init: function()
     {
-        console.log('hi');
         var me = this;
         
-        //DO A LOOKUP ON THE 'viewport', WAIT FOR RENDER
-        // this.control({
-        //     'viewport': {
-        //         render: me.onViewPortRendered
-        //     }
-        // });
         
         //CREATE THE UI
         var mainView = Ext.create('com.rmc.projects.Radiology.view.MainView');
-        //     renderTo: Ext.getBody()
-        // });
-        // mainView.show();
+
         // Setup event handlers
         this.control({
              "worklistNavBar button[action=newOrder]": {

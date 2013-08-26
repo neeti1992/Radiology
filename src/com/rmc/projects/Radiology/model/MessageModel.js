@@ -20,11 +20,11 @@ Ext.define('com.rmc.projects.Radiology.model.MessageModel', {
     // Properties
     // --------------------------------------
     extend  : 'Ext.data.Model',
-  fields  : ['message'],
+/*  fields  : ['message'],
     data    : [
         {message: 'Hello World From MessageModel!'}
     ]
-    
+*/    
     
 });
 
