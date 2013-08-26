@@ -74,7 +74,7 @@ Ext.define('com.rmc.projects.Radiology.view.MainViewUI', {
             }],
             width: 960,
             id: 'mainArea',
-            activeItem: 1,
+            activeItem: 0,
             layout: {
                 type: 'card'
             },
@@ -82,6 +82,8 @@ Ext.define('com.rmc.projects.Radiology.view.MainViewUI', {
             region: 'center',
             items: [{
                 xtype: 'Home'
+            }, {
+                xtype: 'addOrder'
             }]
         };
         this.callParent();

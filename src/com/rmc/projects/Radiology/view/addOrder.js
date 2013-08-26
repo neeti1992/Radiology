@@ -2,13 +2,11 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
     extend: 'Ext.form.Panel',
     alias: 'widget.addOrder',
     id: 'addOrder',
-    hidden: true,
-    centered: true,
-    floating: true,
     autoScroll: true,
     title: 'Create Radiology Order',
     layout: {
         type: 'vbox',
+        //will stretch to entire screen....
         align: 'stretch'
     },
     items: [
@@ -18,23 +16,25 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
         margin: '20 20 20 20',
         items:[ 
        {
-        xtype: 'textfield',
-        id: 'addOrderPatientID',
-        width: 240,
-        blankText: '',
-        emptyText: 'Enter the Patient Registration Number',
-        x: 10,
-        y: 30
-    }, {
-        xtype: 'button',
-        height: 20,
-        width: 50,
-        text: 'Find',
-        x: 260,
-        y: 30,
-        handler: function () {
-            // TO DO: rest call to search for patient
-        }
+            xtype: 'textfield',
+            id: 'addOrderPatientID',
+            width: 240,
+            blankText: '',
+            emptyText: 'Enter the Patient Registration Number',
+            //better to have percentages here rather than x/y -- we don't know screen resolution
+            x: 10,
+            y: 30
+        }, {
+            xtype: 'button',
+            height: 20,
+            width: 50,
+            text: 'Find',
+            x: 260,
+            y: 30,
+            handler: function () {
+                // TO DO: rest call to search for patient
+            }
+        }]
     }, {
         xtype: 'combobox',
         fieldLabel: 'Order Type',
@@ -87,7 +87,6 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
         handler: function () {
             // TO DO: rest call to search for doctors
         }
-    }]
     },
     {
         layout: {
