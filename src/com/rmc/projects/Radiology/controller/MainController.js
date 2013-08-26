@@ -29,7 +29,7 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
 
     stores: ['com.rmc.projects.Radiology.store.MessageStore','com.rmc.projects.Radiology.store.WorklistStore'],
 
-    models: ['com.rmc.projects.Radiology.model.WorklistModel'],
+    models: ['com.rmc.projects.Radiology.model.WorklistModel','com.rmc.projects.Radiology.model.MessageModel'],
 
     // --------------------------------------
     // Constructor
@@ -38,18 +38,10 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
     {
         var me = this;
         
-        //DO A LOOKUP ON THE 'viewport', WAIT FOR RENDER
-        this.control({
-            'viewport': {
-                render: me.onViewPortRendered
-            }
-        });
         
         //CREATE THE UI
-        var mainView = Ext.create('com.rmc.projects.Radiology.view.MainView', {
-            renderTo: Ext.getBody()
-        });
-        mainView.show();
+        var mainView = Ext.create('com.rmc.projects.Radiology.view.MainView');
+
         // Setup event handlers
         this.control({
              "worklistNavBar button[action=newOrder]": {
@@ -70,27 +62,29 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
 
     // Generate pop-up which allows user to create a new order
     newOrder : function() {
-        Ext.getCmp('addOrder').show();
+        Ext.getCmp('mainArea').getLayout().setActiveItem(1);
     },
     
     cancelNewOrder : function() {
-        Ext.getCmp('addOrder').hide();
+        Ext.getCmp('mainArea').getLayout().setActiveItem(0);
     },
     
     submitNewOrder: function() {
             Ext.getCmp('addOrder').hide();  //To Do: modify following code once backend is done
-            Ext.getCmp.store.getProxy();
-        Ext.getCmp.store.load({
-            scope: this,
-            callback: function(records, operation, success){
-                if(success){
-                    //do the things here
-                }
-                else{
-                    Ext.Msg.alert("Error", Util.getMessageLoadError());
-                }
-            }
-        });
+        Ext.getCmp('mainArea').getLayout().setActiveItem(0);
+
+        //     Ext.getCmp.store.getProxy();
+        // Ext.getCmp.store.load({
+        //     scope: this,
+        //     callback: function(records, operation, success){
+        //         if(success){
+        //             //do the things here
+        //         }
+        //         else{
+        //             Ext.Msg.alert("Error", Util.getMessageLoadError());
+        //         }
+        //     }
+        // });
             /*
             Ext.Ajax.request({
             url: 
