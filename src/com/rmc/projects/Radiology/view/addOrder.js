@@ -7,7 +7,7 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
     layout: {
         type: 'vbox',
         //will stretch to entire screen....
-        align: 'stretch'
+        //align: 'stretch'
     },
     items: [
     {
