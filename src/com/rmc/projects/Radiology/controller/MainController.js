@@ -27,10 +27,11 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
      'com.rmc.projects.Radiology.view.addOrder',
     ],
 
-    stores: ['com.rmc.projects.Radiology.store.OrderType','com.rmc.projects.Radiology.store.WorklistStore'],
+    stores: ['com.rmc.projects.Radiology.store.OrderType','com.rmc.projects.Radiology.store.Modality','com.rmc.projects.Radiology.store.Priority',
+    'com.rmc.projects.Radiology.store.WorklistStore'],
 
-    models: ['com.rmc.projects.Radiology.model.WorklistModel','com.rmc.projects.Radiology.model.OrderType'],
-
+    models: ['com.rmc.projects.Radiology.model.WorklistModel','com.rmc.projects.Radiology.store.Modality','com.rmc.projects.Radiology.store.OrderType',
+    'com.rmc.projects.Radiology.model.Priority'],
     // --------------------------------------
     // Constructor
     // --------------------------------------
