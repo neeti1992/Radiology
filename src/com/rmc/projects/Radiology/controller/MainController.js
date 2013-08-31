@@ -27,9 +27,9 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
      'com.rmc.projects.Radiology.view.addOrder',
     ],
 
-    stores: ['com.rmc.projects.Radiology.store.MessageStore','com.rmc.projects.Radiology.store.WorklistStore'],
+    stores: ['com.rmc.projects.Radiology.store.OrderType','com.rmc.projects.Radiology.store.WorklistStore'],
 
-    models: ['com.rmc.projects.Radiology.model.WorklistModel','com.rmc.projects.Radiology.model.MessageModel'],
+    models: ['com.rmc.projects.Radiology.model.WorklistModel','com.rmc.projects.Radiology.model.OrderType'],
 
     // --------------------------------------
     // Constructor
@@ -53,6 +53,9 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
             "addOrder button[action=cancelNewOrder]": {
                 click: this.cancelNewOrder
             },
+            "addOrder button[action=resetNewOrder]": {
+                click: this.resetNewOrder
+            },
             // To Do: handlers for find buttons in add order 
         });    
     },
@@ -64,8 +67,13 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
     newOrder : function() {
         Ext.getCmp('mainArea').getLayout().setActiveItem(1);
     },
+
+    resetNewOrder: function(){
+        Ext.getCmp('addOrder').getForm().reset();
+    },
     
     cancelNewOrder : function() {
+        Ext.getCmp('addOrder').getForm().reset();
         Ext.getCmp('mainArea').getLayout().setActiveItem(0);
     },
     
