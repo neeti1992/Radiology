@@ -8,20 +8,24 @@ Ext.define('com.rmc.projects.Radiology.model.WorklistModel', {
         name: 'patientName',
         type: 'string'
     }, {
-        name: 'patientID',
+        name: 'priority',
         type: 'string'
     }, {
-        name: 'status',
+        name: 'modality',
         type: 'string'
-    }, {
-        name: 'procedure',
+    },{
+        name: 'scan_body_part',
         type: 'string'
     }, {
         name: 'start_date',
         type: 'date',
         dateFormat: 'm/d/Y'
-    },{
-        name: 'scan_body_part',
+    }, {
+        name: 'expiry_date',
+        type: 'date',
+        dateFormat: 'm/d/Y'
+    }, {
+        name: 'status',
         type: 'string'
     }
 ]
