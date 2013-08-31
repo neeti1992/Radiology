@@ -9,13 +9,13 @@ Ext.define('com.rmc.projects.Radiology.view.worklistNavBar', {
         margin: '10 0 0 20',
         html: '<b><u>ORDERS</u></b>',
         height: 20
-    }, {
+   /* }, {
         xtype: 'button',
         width: 180,
         height: 40,
         text: 'View Orders',
         id: 'viewOrderButton',
-        //action: 'viewOrder'
+        //action: 'viewOrder' */
     }, {
         xtype: 'button',
         width: 180,
