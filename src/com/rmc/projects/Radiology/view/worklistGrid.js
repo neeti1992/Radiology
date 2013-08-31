@@ -17,36 +17,42 @@ Ext.define('com.rmc.projects.Radiology.view.worklistGrid', {
         xtype: 'gridcolumn',
         text: 'Name of Patient',
         dataIndex: 'patientName',
-        width: 120
+        width: 150
     },
     {
         xtype: 'gridcolumn',
-        text: 'Patient ID',
-        dataIndex: 'patientID',
-        width: 60
+        text: 'Priority',
+        dataIndex: 'priority',
+        width: 70
     },
     {
         xtype: 'gridcolumn',
-        text: 'Procedure',
-        dataIndex: 'procedure',
-        width: 60
+        text: 'Modality',
+        dataIndex: 'modality',
+        width: 90
     },
     {
         xtype: 'gridcolumn',
         text: 'Body Part',
         dataIndex: 'scan_body_part',
-        width: 60
+        width: 100
     },
     {
         xtype: 'gridcolumn',
-        text: 'Study Date',
+        text: 'Start Date',
         dataIndex: 'start_date',
-        width: 60,
+        width: 75
+    },
+    {
+        xtype: 'gridcolumn',
+        text: 'Expiry Date',
+        dataIndex: 'expiry_date',
+        width: 75,
     },
     {
         xtype: 'gridcolumn',
         text: 'Status',
         dataIndex: 'status',
-        width: 60
+        width: 65
     }],    
 });
