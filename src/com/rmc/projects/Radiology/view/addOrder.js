@@ -1,33 +1,34 @@
-var orderType = new Ext.data.Store({
-            model: com.rmc.projects.Radiology.model.OrderType,
-            proxy: {
-                type: 'memory',
-                reader: {
-                    type: 'array'
-                }
-            },
-            data: com.rmc.projects.Radiology.data.DataSets.OrderType
-        }),
-modality = new Ext.data.Store({
-            model: com.rmc.projects.Radiology.model.Modality,
-            proxy: {
-                type: 'memory',
-                reader: {
-                    type: 'array'
-                }
-            },
-            data: com.rmc.projects.Radiology.data.DataSets.Modality
-        }),
-priority = new Ext.data.Store({
-            model: com.rmc.projects.Radiology.model.Priority,
-            proxy: {
-                type: 'memory',
-                reader: {
-                    type: 'array'
-                }
-            },
-            data: com.rmc.projects.Radiology.data.DataSets.Priority
-        });
+// var orderType = new Ext.data.Store({
+//             model: com.rmc.projects.Radiology.model.OrderType,
+//             proxy: {
+//                 type: 'ajax',
+//                  reader: {
+//                      type: 'json',
+//                      root: 'results'
+//                  },
+//                  url: './data/DataSets.json'//com.rmc.projects.Radiology.data.DataSets.OrderType
+//             },
+//         }),
+// modality = new Ext.data.Store({
+//             model: com.rmc.projects.Radiology.model.Modality,
+//             proxy: {
+//                 type: 'memory',
+//                 reader: {
+//                     type: 'array'
+//                 }
+//             },
+//             data: com.rmc.projects.Radiology.data.DataSets.Modality
+//         }),
+// priority = new Ext.data.Store({
+//             model: com.rmc.projects.Radiology.model.Priority,
+//             proxy: {
+//                 type: 'memory',
+//                 reader: {
+//                     type: 'array'
+//                 }
+//             },
+//             data: com.rmc.projects.Radiology.data.DataSets.Priority
+//         });
 
 Ext.define('com.rmc.projects.Radiology.view.addOrder', {
     extend: 'Ext.form.Panel',
@@ -80,7 +81,7 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
             listConfig: {
                             minWidth: null
                         },
-            store: orderType,
+            store: 'com.rmc.projects.Radiology.store.OrderType',
             valueField: 'OrderType',
             displayField: 'OrderType'
           }, {
@@ -97,7 +98,7 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
             listConfig: {
                             minWidth: null
                         },
-            store: modality,
+            // store: modality,
             valueField: 'Modality',
             displayField: 'Modality'
           }, {
@@ -124,7 +125,7 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
             listConfig: {
                             minWidth: null
                         },
-            store: priority,
+            // store: priority,
             valueField: 'Priority',
             displayField: 'Priority'
           }, {
