@@ -26,7 +26,8 @@
 Ext.Loader.setConfig({
         enabled	: true,
           paths	: {
-            com	: "src/com"
+            "com"	: "src/com",
+            "Ext.ux": "ux"
        }
 });
 
