@@ -1,38 +1,6 @@
-// var orderType = new Ext.data.Store({
-//             model: com.rmc.projects.Radiology.model.OrderType,
-//             proxy: {
-//                 type: 'ajax',
-//                  reader: {
-//                      type: 'json',
-//                      root: 'results'
-//                  },
-//                  url: './data/DataSets.json'//com.rmc.projects.Radiology.data.DataSets.OrderType
-//             },
-//         }),
-// modality = new Ext.data.Store({
-//             model: com.rmc.projects.Radiology.model.Modality,
-//             proxy: {
-//                 type: 'memory',
-//                 reader: {
-//                     type: 'array'
-//                 }
-//             },
-//             data: com.rmc.projects.Radiology.data.DataSets.Modality
-//         }),
-// priority = new Ext.data.Store({
-//             model: com.rmc.projects.Radiology.model.Priority,
-//             proxy: {
-//                 type: 'memory',
-//                 reader: {
-//                     type: 'array'
-//                 }
-//             },
-//             data: com.rmc.projects.Radiology.data.DataSets.Priority
-//         });
 
 Ext.define('com.rmc.projects.Radiology.view.addOrder', {
     extend: 'Ext.form.Panel',
-    requires: ['com.rmc.projects.Radiology.model.OrderType'],
     alias: 'widget.addOrder',
     id: 'addOrder',
     autoScroll: true,
@@ -57,9 +25,11 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
             //better to have percentages here rather than x/y -- we don't know screen resolution
             x: "10%",
             y: ".5%",
-            allowBlank: false
+            allowBlank: false,
+            name: 'PatientName'
+
             }, {
-            xtype: 'button',
+           /* xtype: 'button',
             height: 20,
             width: 50,
             x: 200,
@@ -68,40 +38,45 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
             handler: function () {
                 // TO DO: rest call to search for patient
             }
-            }, {
+            }, {*/
+
             xtype: 'combobox',
-            fieldLabel: 'Order Type',
-            id: 'addOrderType',
+            fieldLabel: 'Scheduled Status',
+            id: 'addOrderScheduledStatus',
             allowBlank: false,
             typeAhead: true,
-            x: "-1.4%",
+            x: "-1.7%",
             y: "8%",
             queryMode: 'local',
             forceSelection: true,
             listConfig: {
                             minWidth: null
                         },
-            store: 'com.rmc.projects.Radiology.store.OrderType',
-            valueField: 'OrderType',
-            displayField: 'OrderType'
+            store: 'com.rmc.projects.Radiology.store.ScheduledStatus',
+            valueField: 'ScheduledStatus',
+            displayField: 'ScheduledStatus',
+            name: 'ScheduledStatus'
           }, {
+
             xtype: 'combobox',
             fieldLabel: 'Modality',
-            id: 'addModality',
+            id: 'addOrderModality',
              allowBlank: false,
              typeAhead: true,
              x: "-6.6%",
-            y: "15%",
+            y: "17%",
             typeAhead: true,
             queryMode: 'local',
             forceSelection: true,
             listConfig: {
                             minWidth: null
                         },
-            // store: modality,
+            store: 'com.rmc.projects.Radiology.store.Modality',
             valueField: 'Modality',
-            displayField: 'Modality'
+            displayField: 'Modality',
+            name: 'Modality'
           }, {
+
             xtype: 'textfield',
             width: "90%",
             fieldLabel: '',
@@ -110,25 +85,29 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
              allowBlank: false,
              //x: 30,
             x: "10%",
-            y: "22%"
+            y: "24%",
+            name: 'BodyScan'
           }, {
+
             xtype: 'combobox',
             fieldLabel: 'Priority',
             id: 'addOrderPriority',
              allowBlank: false,
              typeAhead: true,
              x: "-10%",
-            y: "29%",
+            y: "31%",
              typeAhead: true,
             queryMode: 'local',
             forceSelection: true,
             listConfig: {
                             minWidth: null
                         },
-            // store: priority,
+            store: 'com.rmc.projects.Radiology.store.Priority',
             valueField: 'Priority',
-            displayField: 'Priority'
+            displayField: 'Priority',
+            name: 'Priority'
           }, {
+
             xtype: 'datefield',
             width: 250,
             fieldLabel: 'Start Date',
@@ -136,8 +115,10 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
              allowBlank: false,
              labelAlign: 'left',
             x: "-3.7%",
-            y: 175
+            y: 175,
+            name: 'StartDate'
             }, {
+
             xtype: 'datefield',
             width: 250,
             fieldLabel: 'Expiry Date',
@@ -145,8 +126,10 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
              allowBlank: false,
              labelAlign: 'left',
             x: "-1%",
-            y: 207
+            y: 207,
+            name: 'ExpiryDate'
             }, {
+            
             xtype: 'textfield',
             width: "85%",
             blankText: '',
@@ -154,7 +137,8 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
             emptyText: 'Enter Referring Physician name',
              allowBlank: false,
              x: "10%",
-            y: 242
+            y: 242,
+            name: 'RefPhyName'
             },    
             /*{
             xtype: 'button',
@@ -168,6 +152,7 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
             }
             }*/
             {
+            
              xtype: 'textfield',
              width: "85%",
              blankText: '',
@@ -175,8 +160,10 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
              emptyText: 'Enter Performing Physician name',
               allowBlank: false,
               x: "10%",
-             y: 276
+             y: 276,
+            name: 'PerPhyName'
             }, {
+            
              xtype: 'textfield',
              width: "85%",
              blankText: '',
@@ -184,26 +171,28 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
              emptyText: 'Enter Reading Physician name',
               allowBlank: false,
               x: "10%",
-             y: 308
-            },{
-            xtype: 'datefield',
-            width: 250,
-            fieldLabel: 'Scheduled Status',
-            id: 'addOrderScheduledStatus',
-             allowBlank: false,
-             labelAlign: 'left',
-            x: "-2%",
-            y: 335
-            }, {
-            xtype: 'datefield',
-            width: 250,
+             y: 308,
+             name: 'ReadPhyName'
+             }, {
+
+            xtype: 'combobox',
             fieldLabel: 'Performed Status',
             id: 'addOrderPerformedStatus',
-             allowBlank: false,
-             labelAlign: 'left',
-            x: "-2%",
-            y: 370
+            name: 'PerformedStatus',
+            allowBlank: false,
+            typeAhead: true,
+            x: "-1.7%",
+            y: 335,
+            queryMode: 'local',
+            forceSelection: true,
+            listConfig: {
+                            minWidth: null
+                        },
+            store: 'com.rmc.projects.Radiology.store.PerformedStatus',
+            valueField: 'PerformedStatus',
+            displayField: 'PerformedStatus'
             }, {
+            
             xtype: 'textfield',
             width: "90%",
             height: 60,
@@ -212,7 +201,8 @@ Ext.define('com.rmc.projects.Radiology.view.addOrder', {
             emptyText: 'Enter any additional information',
              allowBlank: true,
              x: "10%",
-            y: 415
+            y: 380,
+            name: 'AddInfo'
             }
         ]
      },
