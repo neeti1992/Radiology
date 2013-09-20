@@ -27,11 +27,11 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
      'com.rmc.projects.Radiology.view.addOrder',
     ],
 
-    stores: ['com.rmc.projects.Radiology.store.OrderType','com.rmc.projects.Radiology.store.Modality','com.rmc.projects.Radiology.store.Priority',
+    stores: ['com.rmc.projects.Radiology.store.ScheduledStatus','com.rmc.projects.Radiology.store.PerformedStatus','com.rmc.projects.Radiology.store.Modality','com.rmc.projects.Radiology.store.Priority',
     'com.rmc.projects.Radiology.store.WorklistStore'],
 
-    models: ['com.rmc.projects.Radiology.model.WorklistModel','com.rmc.projects.Radiology.store.Modality','com.rmc.projects.Radiology.store.OrderType',
-    'com.rmc.projects.Radiology.model.Priority'],
+    models: ['com.rmc.projects.Radiology.model.WorklistModel','com.rmc.projects.Radiology.store.Modality','com.rmc.projects.Radiology.store.ScheduledStatus',
+    'com.rmc.projects.Radiology.model.PerformedStatus','com.rmc.projects.Radiology.model.Priority'],
     // --------------------------------------
     // Constructor
     // --------------------------------------
@@ -158,67 +158,6 @@ Ext.define('com.rmc.projects.Radiology.controller.MainController', {
             "Content-Type": "application/json"
         };
         return headers;
-    },
+    }
     
-    
-    
-    
-    // --------------------------------------
-    // Event Handlers
-    // --------------------------------------
-    /*onViewPortRendered: function()
-    {
-        
-        //SAVE 'MainController' as reference
-        var me = this;
-        
-        //TRACE
-        console.log ("MainViewUI.onViewPortRendered() ");
-        
-        //ONE-TIME-ONLY, STORE REFERENCES TO THE UI
-        this.bodyText            = Ext.ComponentManager.get('bodyText');
-        this.loadMessageButton   = Ext.ComponentManager.get('loadMessageButton');
-        this.clearMessageButton  = Ext.ComponentManager.get('clearMessageButton');
-        
-        //LISTENERS
-        this.loadMessageButton.addListener  ("click", function () { me.onLoadMessageButtonClick() } ) ;
-        this.clearMessageButton.addListener ("click", function () { me.onClearMessageButtonClick() } );
-
-    },
-    
-    onLoadMessageButtonClick: function()
-    {
-                
-        //TRACE
-        console.log ("MainViewUI.onLoadMessageButtonClick() ");
-
-        //DISABLE THIS BUTTON
-        this.loadMessageButton.setDisabled(true);
-        
-        //ENABLE CLEAR BUTTON
-        this.clearMessageButton.setDisabled(false);
-        
-        //GET DATA FROM MODEL, THE STORE "WRAPS" THE MODEL        
-        var messageStore = this.getStore('src.com.rmc.projects.Radiology.store.MessageStore');
-                
-        //SET MESSAGE VALUE
-        this.bodyText.setValue (messageStore.getMessage());
-    },
-    
-    
-    onClearMessageButtonClick: function()
-    {
-        
-        //TRACE
-        console.log ("MainViewUI.onClearMessageButtonClick()");
-
-        //SET MESSAGE VALUE
-        this.bodyText.setValue ("");
-        
-        //DISABLE THIS BUTTON
-        this.clearMessageButton.setDisabled(true);
-        
-        //ENABLE CLEAR BUTTON
-        this.loadMessageButton.setDisabled (false);
-    }*/
 });
