@@ -9,6 +9,10 @@
     <PerformedStatus>IN_PROGRESS</PerformedStatus>
     <StartDate>09/28/2013</StartDate>
     <ExpiryDate>09/30/2013</ExpiryDate>
+    <RefPhyName>x</RefPhyName>
+    <ReadPhyName>y</ReadPhyName>
+    <PerPhyName>z</PerPhyName>
+    <AddInfo> </AddInfo>
   </worklist>
   <worklist>
     <PatientName>abc</PatientName>
@@ -19,6 +23,10 @@
     <PerformedStatus>COMPLETED</PerformedStatus>
     <StartDate>09/16/2013</StartDate>
     <ExpiryDate>09/24/2013</ExpiryDate>
+    <RefPhyName>a</RefPhyName>
+    <ReadPhyName>b</ReadPhyName>
+    <PerPhyName>c</PerPhyName>
+    <AddInfo>abcabc</AddInfo>
   </worklist>
   <worklist>
     <PatientName>pqr</PatientName>
@@ -29,5 +37,9 @@
     <PerformedStatus>DISCONTINUED</PerformedStatus>
     <StartDate>09/15/2013</StartDate>
     <ExpiryDate>09/17/2013</ExpiryDate>
+    <RefPhyName>p</RefPhyName>
+    <ReadPhyName>q</ReadPhyName>
+    <PerPhyName>r</PerPhyName>
+    <AddInfo> </AddInfo>
   </worklist>
 </catalog>
