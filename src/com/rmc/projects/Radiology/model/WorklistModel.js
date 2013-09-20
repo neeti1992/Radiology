@@ -5,28 +5,43 @@ Ext.define('com.rmc.projects.Radiology.model.WorklistModel', {
         //shouldn't go with post call's body so we make the persist property false 
         persist: false 
     }, {
-        name: 'patientName',
+        name: 'PatientName',
         type: 'string'
     }, {
-        name: 'priority',
+        name: 'Priority',
         type: 'string'
     }, {
-        name: 'modality',
+        name: 'Modality',
         type: 'string'
     },{
-        name: 'scan_body_part',
+        name: 'BodyScan',
         type: 'string'
     }, {
-        name: 'start_date',
+        name: 'StartDate',
         type: 'date',
         dateFormat: 'm/d/Y'
     }, {
-        name: 'expiry_date',
+        name: 'ExpiryDate',
         type: 'date',
         dateFormat: 'm/d/Y'
     }, {
-        name: 'status',
+        name: 'ScheduledStatus',
         type: 'string'
+    }, {
+        name: 'PerformedStatus',
+        type: 'string'
+    }, {
+        name: 'AddInfo',
+        type: 'string'
+    }, {
+        name: 'RefPhyName',
+        type: 'string'
+    }, {
+        name: 'ReadPhyName',
+        type: 'string'
+    }, {
+        name: 'PerPhyName',
+        type: 'string'        
     }
 ]
 });
